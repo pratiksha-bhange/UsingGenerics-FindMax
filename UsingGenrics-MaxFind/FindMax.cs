@@ -6,19 +6,19 @@ namespace UsingGenrics_MaxFind
 {
     public class FindMax
     {
-        public string findMaxStringValue(string firstString, string secondString, string thirdString)
+        public T findMaxValue<T>(T firstValue, T secondValue, T thirdValue)
         {
-            if (firstString.CompareTo(secondString) > 0 && firstString.CompareTo(thirdString) > 0)
+            if (Comparer<T>.Default.Compare(firstValue, secondValue) > 0 && Comparer<T>.Default.Compare(firstValue, thirdValue) > 0)
             {
-                return firstString;
+                return firstValue;
             }
-            else if (secondString.CompareTo(firstString) > 0 && secondString.CompareTo(thirdString) > 0)
+            else if (Comparer<T>.Default.Compare(secondValue, firstValue) > 0 && Comparer<T>.Default.Compare(secondValue, thirdValue) > 0)
             {
-                return secondString;
+                return secondValue;
             }
             else
             {
-                return thirdString;
+                return thirdValue;
             }
         }
     }
