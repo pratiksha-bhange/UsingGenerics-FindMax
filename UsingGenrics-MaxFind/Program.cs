@@ -8,10 +8,15 @@ namespace UsingGenrics_MaxFind
         {
             Console.WriteLine("Welcome to Find Max Using Generics Program");
 
-            FindMax findMaximum = new FindMax();
-            Console.WriteLine("\nMaximum Integer value is : " + findMaximum.findMaxValue<int>(599, 149, 853));
-            Console.WriteLine("\nMaximum Floating value is : " + findMaximum.findMaxValue<double>(9.3, 6.5, 5.8));
-            Console.WriteLine("\nMaximum String is : " + findMaximum.findMaxValue<string>("Pratiksha", "Pravin", "Prashant")); 
+
+            FindMaximum<int> findIntMax = new FindMaximum<int>();
+            FindMaximum<double> findMaximumDouble = new FindMaximum<double>();
+            FindMaximum<string> findstring = new FindMaximum<string>();
+
+            Console.WriteLine("\nMaximum of Integer value is : " + findIntMax.findMaxValue(599, 482, 635));
+            Console.WriteLine("\nMaximum Floating value is : " + findMaximumDouble.findMaxValue(304.45, 95.27, 467.18));
+            Console.WriteLine("\nMaximum String is : " + findstring.findMaxValue("Pratiksha", "Pravin", "Prashant"));
+
         }
     }
 }

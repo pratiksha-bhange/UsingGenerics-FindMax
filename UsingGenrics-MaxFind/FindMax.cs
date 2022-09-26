@@ -4,9 +4,9 @@ using System.Text;
 
 namespace UsingGenrics_MaxFind
 {
-    public class FindMax
+    class FindMaximum<T>
     {
-        public T findMaxValue<T>(T firstValue, T secondValue, T thirdValue)
+        public T findMaxValue(T firstValue, T secondValue, T thirdValue)
         {
             if (Comparer<T>.Default.Compare(firstValue, secondValue) > 0 && Comparer<T>.Default.Compare(firstValue, thirdValue) > 0)
             {
